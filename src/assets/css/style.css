@@ -23,7 +23,7 @@
     padding: 25px 100px 0;
     height: 77px;
 
-    background-color: transparent;
+    background-color: #FFFFFF;
 }
 
 .header > .container {
@@ -167,4 +167,54 @@ nav {
 .collaborate .collaborate__statistics {
     display: flex;
     justify-content: space-between;
+}
+
+.statistic {
+    margin: 0 45px;
+    width: 138px;
+    height: 134px;
+}
+
+.statistic .statistic__count {
+    margin-bottom: 10px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 70px;
+}
+
+.statistic .statistic__descrip {
+    margin-top: 12px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.collaborate .collaborate__partners {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    margin-top: 50px;
+}
+
+.partner {
+    margin: 5px 10px;
+
+    max-width: 151px;
+    height: 34px;
+}
+
+.partner > img {
+    width: 100%;
+    height: auto;
+}
+
+.features {
+    padding: 110px 265px 50px 215px;
+    min-height: 300px;
 }
