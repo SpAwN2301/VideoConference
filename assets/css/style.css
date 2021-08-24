@@ -213,7 +213,7 @@ nav {
     height: 618px;
 }
 
-.about .about__bg > img {
+.about .about__bg > svg {
     width: 100%;
     height: auto;
 
@@ -602,6 +602,54 @@ nav {
     }
 }
 
+#trees {
+    transform-box: fill-box;
+    transform-origin: bottom;
+    animation: 10s linear infinite trees;
+}
+
+#face {
+    animation: 1s linear infinite alternate face;
+}
+
+#left-hand {
+    transform-box: fill-box;
+    transform-origin: bottom;
+    animation: 10s linear infinite left-hand;
+}
+
+#right-hand {
+    transform-box: fill-box;
+    transform-origin: right;
+    animation: 5s linear infinite right-hand;
+}
+
+#timer {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: 5s linear infinite timer;
+}
+
+#hand {
+    transform-box: fill-box;
+    transform-origin: bottom;
+    animation: 1s linear infinite alternate hand;
+}
+
+#Vector_118, #Vector_119, #Vector_120, #Vector_121, #Vector_126 {
+    stroke-dasharray: 100;
+
+    animation: 5s linear infinite stroke;
+}
+
+#Vector_119, #Vector_126 {
+    stroke: #00ECD0;
+}
+
+#Vector_118, #Vector_120, #Vector_121 {
+    stroke: #18216D;
+}
+
 @keyframes scale {
     100% {
         transform: scale(1.1);
@@ -635,5 +683,57 @@ nav {
 
     90% {
         transform: translate3d(0, -1px, 0) scaleY(1.02);
+    }
+}
+
+@keyframes trees {
+    80% {
+        transform: scaleY(0.1) scaleX(.5);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes face {
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes left-hand {
+    20% {
+        transform: translateY(5px) rotateZ(-10deg);
+    }
+    40%, 100% {
+        transform: unset;
+    }
+}
+
+@keyframes right-hand {
+    10%, 20% {
+        transform: rotateZ(5deg);
+    }
+    15%, 25% {
+        transform: unset;
+    }
+}
+
+@keyframes timer {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes hand {
+    100% {
+        transform: rotateZ(20deg);
+    }
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 400;
     }
 }
