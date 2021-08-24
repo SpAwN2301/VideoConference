@@ -225,8 +225,19 @@ nav {
 }
 
 .about .about__bg {
+    position: relative;
     width: 605px;
     height: 618px;
+}
+
+#outer {
+    position: absolute;
+    z-index: -1;
+    bottom: 175px;
+    left: -150px;
+
+    width: 51px;
+    height: 30px;
 }
 
 .about .about__bg > svg {
@@ -442,7 +453,7 @@ nav {
     line-height: 16px;
 }
 
-@media screen and (max-width: 768.5px) {
+@media screen and (max-width: 1200.5px) {
     .header {
         padding: 20px 28px;
     }
@@ -535,6 +546,10 @@ nav {
         margin-top: 40px;
         width: 350px;
         height: 300px;
+    }
+
+    #outer {
+        display: none;
     }
 
     .collaborate {
@@ -676,7 +691,7 @@ nav {
     animation: 1s linear infinite alternate hand;
 }
 
-#Vector_118, #Vector_119, #Vector_120, #Vector_121, #Vector_126 {
+#Vector_118, #Vector_119, #Vector_120, #Vector_121, #Vector_126, #outer {
     stroke-dasharray: 100;
 
     animation: 5s linear infinite stroke;
@@ -690,7 +705,7 @@ nav {
     animation: 4s linear infinite rotate, 3s linear infinite stroke;
 }
 
-#Vector_119, #Vector_122, #Vector_126 {
+#Vector_119, #Vector_122, #Vector_126, #outer {
     stroke: #00ECD0;
 }
 
@@ -700,7 +715,7 @@ nav {
 
 @keyframes scale {
     100% {
-        transform: scale(1.1);
+        transform: scale(1.2);
     }
 }
 
