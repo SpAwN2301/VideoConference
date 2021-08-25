@@ -70,20 +70,11 @@ a {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+
+    padding: 10px 0;
+
     width: 28px;
-    height: 12px;
-
-    transition: .5s;
-}
-
-.hamburger.hamburger_active span:nth-child(1){
-    transform: translateY(9px) rotate(-45deg);
-    transition: .5s;
-}
-
-.hamburger.hamburger_active span:nth-child(2){
-    width: 28px;
-    transform: rotate(45deg);
+    height: 32px;
 
     transition: .5s;
 }
@@ -91,8 +82,11 @@ a {
 .hamburger span {
     display: block;
 
+    width: 28px;
     height: 2.3px;
     background-color: #273551;
+
+    transition: .5s;
 }
 
 .hamburger span:nth-child(1) {
@@ -101,6 +95,18 @@ a {
 
 .hamburger span:nth-child(2) {
     width: 20px;
+}
+
+.hamburger_active span:nth-child(1){
+    transform: translateY(9px) rotate(-45deg);
+    transition: .5s;
+}
+
+.hamburger_active span:nth-child(2){
+    width: 28px;
+    transform: rotate(45deg);
+
+    transition: .5s;
 }
 
 nav {
@@ -163,7 +169,7 @@ nav {
 
 .button_signInBtn:hover {
     transition: .5s;
-    background-color: #18216D;
+    background-color: #005FEC;
     color: #FFFFFF;
 }
 
@@ -691,6 +697,12 @@ nav {
     animation: 1s linear infinite alternate hand;
 }
 
+#comp-hand {
+    transform-box: fill-box;
+    transform-origin: right;
+    animation: .6s cubic-bezier(0.82, 1.79, 0.01, 0.08) infinite alternate comp-hand;
+}
+
 #Vector_118, #Vector_119, #Vector_120, #Vector_121, #Vector_126, #outer {
     stroke-dasharray: 100;
 
@@ -792,6 +804,12 @@ nav {
 @keyframes hand {
     100% {
         transform: rotateZ(20deg);
+    }
+}
+
+@keyframes comp-hand {
+    100% {
+        transform: rotate(3deg) translateX(-2px);
     }
 }
 
